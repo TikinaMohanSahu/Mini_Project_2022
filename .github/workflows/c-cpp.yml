@@ -1,0 +1,17 @@
+name: Build CI - windows
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: windows
+
+    steps:
+    - uses: actions/checkout@src
+    - name: Build
+      run: make -C 3_Implementation
